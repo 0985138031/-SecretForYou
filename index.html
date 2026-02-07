@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secret 💘</title>
+  <style>
+    body {
+      background: pink;
+      text-align: center;
+      font-family: Arial;
+      padding-top: 10px;
+    }
+
+    #display {
+      font-size: 40px;
+      
+      margin: 50px;
+      background: white;
+      width: 290px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .keypad button {
+      width: 150px;
+      height: 120px;
+      font-size:50px;
+      margin: 5px;
+      border: none;
+      border-radius: 10px;
+      background: red;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>ใส่รหัสลับ 💌</h1>
+
+<div id="display">____</div>
+
+<div class="keypad">
+  <button onclick="add(1)">1</button>
+  <button onclick="add(2)">2</button>
+  <button onclick="add(3)">3</button><br>
+
+  <button onclick="add(4)">4</button>
+  <button onclick="add(5)">5</button>
+  <button onclick="add(6)">6</button><br>
+
+  <button onclick="add(7)">7</button>
+  <button onclick="add(8)">8</button>
+  <button onclick="add(9)">9</button><br>
+
+  <button onclick="clearCode()">ลบ</button>
+  <button onclick="add(0)">0</button>
+  <button onclick="check()">✔</button>
+</div>
+
+<script>
+let code = "";
+
+function add(num) {
+  if (code.length < 4) {
+    code += num;
+    document.getElementById("display").innerText = code;
+  }
+}
+
+function clearCode() {
+  code = "";
+  document.getElementById("display").innerText = "____";
+}
+
+function check() {
+  let correct = "1234"; // เปลี่ยนรหัสตรงนี้
+
+  if (code === correct) {
+    window.location.href = "surprise.html";
+  } else {
+    alert("รหัสผิด 😝");
+    clearCode();
+  }
+}
+</script>
+
+</body>
+</html>

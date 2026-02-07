@@ -1,0 +1,4 @@
+.top-left { transform: rotate(-20deg); }
+.top-right { transform: rotate(20deg); }
+.bottom-left { transform: rotate(15deg); }
+.bottom-right { transform: rotate(-15deg); }
